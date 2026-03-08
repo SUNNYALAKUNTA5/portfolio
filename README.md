@@ -194,5 +194,3 @@ For questions or collaboration opportunities:
 - GitHub: [Your GitHub](https://github.com/yourusername)
 
 ---
-
-**Built with ❤️ using React & CSS Modules**
