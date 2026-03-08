@@ -1,0 +1,352 @@
+/* Experience Section Styles */
+.experience {
+  background: linear-gradient(180deg, #0f172a 0%, #0a0a0f 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  text-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+}
+
+/* Experience Content */
+.experience-content {
+  display: flex;
+  justify-content: center;
+}
+
+/* Timeline */
+.timeline {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent-purple), var(--accent-cyan));
+  opacity: 0.5;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5), 0 0 40px rgba(6, 182, 212, 0.3);
+  border-radius: 2px;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline Marker */
+.timeline-marker {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.marker-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 2px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--glass-shadow);
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.marker-icon svg {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  transition: var(--transition-normal);
+  filter: drop-shadow(0 0 10px rgba(124, 58, 237, 0.5));
+}
+
+.timeline-item:hover .marker-icon {
+  transform: scale(1.1);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+.timeline-item:hover .marker-icon svg {
+  color: var(--accent-cyan);
+  filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.8));
+}
+
+.marker-line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(124, 58, 237, 0.5), transparent);
+  margin-top: 1rem;
+}
+
+/* Timeline Content */
+.timeline-content {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+/* Experience Card */
+.experience-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--glass-shadow);
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(124, 58, 237, 0.1), rgba(6, 182, 212, 0.1));
+  opacity: 0;
+  transition: var(--transition-normal);
+  pointer-events: none;
+}
+
+.experience-card:hover::before {
+  opacity: 1;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+/* Experience Header */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.experience-title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: var(--text-primary);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.experience-date {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Experience Organization */
+.experience-org {
+  font-size: 1.125rem;
+  color: var(--accent-cyan);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Experience Description */
+.experience-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience {
+    padding: 4rem 0;
+  }
+  
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    margin-bottom: 3rem;
+  }
+  
+  .timeline-marker {
+    margin-right: 1.5rem;
+  }
+  
+  .marker-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .marker-icon svg {
+    font-size: 1.25rem;
+  }
+  
+  .timeline-content {
+    padding: 0 1.5rem;
+  }
+  
+  .experience-card {
+    padding: 1.5rem;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .experience-title {
+    font-size: 1.25rem;
+  }
+  
+  .experience-org {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 3rem 0;
+  }
+  
+  .timeline::before {
+    left: 15px;
+  }
+  
+  .timeline-item {
+    margin-bottom: 2.5rem;
+  }
+  
+  .timeline-marker {
+    margin-right: 1rem;
+  }
+  
+  .marker-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .marker-icon svg {
+    font-size: 1rem;
+  }
+  
+  .timeline-content {
+    padding: 0 1rem;
+  }
+  
+  .experience-card {
+    padding: 1.25rem;
+  }
+  
+  .experience-title {
+    font-size: 1.125rem;
+  }
+  
+  .experience-org {
+    font-size: 0.9rem;
+  }
+  
+  .experience-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Accessibility improvements */
+.timeline-item,
+.experience-card {
+  will-change: transform, opacity;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .experience {
+    background: #000;
+  }
+  
+  .timeline::before {
+    background: #fff;
+    box-shadow: 0 0 5px #fff;
+  }
+  
+  .experience-card {
+    background: #1a1a1a;
+    border-color: #fff;
+  }
+  
+  .marker-icon {
+    border-color: #fff;
+    background: #333;
+  }
+  
+  .experience-title {
+    color: #fff;
+  }
+  
+  .experience-date {
+    background: #333;
+    border-color: #fff;
+    color: #fff;
+  }
+  
+  .experience-org {
+    color: #fff;
+  }
+}
